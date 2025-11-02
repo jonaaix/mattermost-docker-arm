@@ -13,7 +13,7 @@ A minimal Docker Compose setup to run [Mattermost](https://mattermost.com/) on A
 2. Copy the example files:
    ```bash
    cp .env.example .env
-   cp compose.example.yml compose.yml
+   cp compose.example.yaml compose.yaml
    ```
 
 3. Configure your environment:
