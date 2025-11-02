@@ -21,11 +21,25 @@ A minimal Docker Compose setup to run [Mattermost](https://mattermost.com/) on A
 
 4. Start the services:
    ```bash
+   docker compose build
    docker compose up -d
    ```
 
 5. Open Mattermost in your browser:
    [http://localhost:8065](http://localhost:8065)
+
+## Update
+To update, edit the Dockerfile and upgrade the Mattermost version in:
+```Dockerfile
+ARG MM_PACKAGE="https://releases.mattermost.com/11.0.4/mattermost-11.0.4-linux-arm64.tar.gz"
+```
+**Note: Downgrade is not supported!**
+
+Then rebuild and restart the containers:
+```bash
+docker compose build
+docker compose up -d
+```
 
 ---
 
