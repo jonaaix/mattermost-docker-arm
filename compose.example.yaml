@@ -41,6 +41,23 @@ services:
       networks:
          - app
 
+   pgadmin:
+      image: dpage/pgadmin4:latest
+      container_name: mattermost_pgadmin
+      environment:
+         PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+         PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+         PGADMIN_CONFIG_SERVER_MODE: 'True'
+      volumes:
+         - pgadmin_volume:/var/lib/pgadmin
+      restart: unless-stopped
+      networks:
+         - app
+         - main-proxy
+      labels:
+         caddy_0: pgadmin.${MM_DOMAIN}
+         caddy_0.reverse_proxy: "{{upstreams 80}}"
+
 volumes:
    mm_volume:
    db_volume:
