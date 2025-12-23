@@ -61,6 +61,7 @@ services:
 volumes:
    mm_volume:
    db_volume:
+   pgadmin_volume:
 
 networks:
    app:
