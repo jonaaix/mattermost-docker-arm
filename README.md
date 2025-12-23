@@ -31,7 +31,7 @@ A minimal Docker Compose setup to run [Mattermost](https://mattermost.com/) on A
 ## Update
 To update, edit the Dockerfile and upgrade the Mattermost version in:
 ```Dockerfile
-ARG MM_PACKAGE="https://releases.mattermost.com/11.2.1/mattermost-team-11.2.1-linux-amd64.tar.gz"
+ARG MM_PACKAGE="https://releases.mattermost.com/11.2.1/mattermost-team-11.2.1-linux-arm64.tar.gz"
 ```
 **Note: Downgrade is not supported!**
 
