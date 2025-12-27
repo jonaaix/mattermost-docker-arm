@@ -41,6 +41,15 @@ docker compose build
 docker compose up -d
 ```
 
+## Backup Configuration
+To enable backups to S3-compatible storage, configure the variables in your `.env` file.
+Then add a cron job to your host system:
+```bash
+crontab -e
+
+30 3 * * * /var/www/mattermost-docker/backup-s3.sh >> /var/www/mattermost-docker/mm_backup.log 2>&1
+```
+
 ---
 
 For advanced configurations or production setup, refer to the [official Mattermost documentation](https://docs.mattermost.com/).
