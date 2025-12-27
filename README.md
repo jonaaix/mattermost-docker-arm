@@ -47,7 +47,7 @@ Then add a cron job to your host system:
 ```bash
 crontab -e
 
-30 3 * * * /var/www/mattermost-docker/backup-s3.sh >> /var/www/mattermost-docker/mm_backup.log 2>&1
+30 3 * * * /var/www/mattermost-docker-arm/backup-s3.sh >> /var/www/mattermost-docker-arm/mm_backup.log 2>&1
 ```
 
 ---
