@@ -5,7 +5,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Build args for user and package version
 ARG PUID=2000
 ARG PGID=2000
-ARG MM_PACKAGE="https://releases.mattermost.com/11.2.1/mattermost-team-11.2.1-linux-arm64.tar.gz"
+ARG MM_PACKAGE="https://releases.mattermost.com/11.3.0/mattermost-team-11.3.0-linux-arm64.tar.gz"
 
 # Environment
 ENV PATH="/mattermost/bin:${PATH}" \
