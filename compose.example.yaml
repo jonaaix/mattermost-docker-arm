@@ -19,7 +19,7 @@ services:
             caddy_0.reverse_proxy: "{{upstreams 8065}}"
       volumes:
          - mm_data:/mattermost/data
-         - mm_config:/mattermost/config
+         - ./config:/mattermost/config
          - mm_plugins:/mattermost/plugins
          - mm_client:/mattermost/client
 #      ports:
@@ -63,7 +63,6 @@ services:
 
 volumes:
    mm_data:
-   mm_config:
    mm_plugins:
    mm_client:
    db_volume:
